@@ -18,7 +18,8 @@ public class RmiServer {
 		new ClassPathXmlApplicationContext(
 			"application-config.xml",
 			"infrastructure-config.xml",
-			"rmi-exporter.xml"
+			"rmi-exporter.xml",
+			"aop-config.xml"
 		);
 			
 	}
