@@ -6,6 +6,8 @@
 		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
 
     <import resource="classpath:/application-config.xml" />
+    
+    <import resource="classpath:/aop-config.xml" />
 
     <jdbc:embedded-database id="dataSource" type="H2">
         <jdbc:script location="create-tables.sql" />
