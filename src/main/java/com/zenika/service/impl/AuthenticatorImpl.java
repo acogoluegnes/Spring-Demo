@@ -3,7 +3,9 @@
  */
 package com.zenika.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import com.zenika.dao.UserDao;
@@ -14,12 +16,13 @@ import com.zenika.service.Authenticator;
  * @author acogoluegnes
  *
  */
+@Named
 @Transactional
 public class AuthenticatorImpl implements Authenticator {
 	
 	private UserDao userDao;
 	
-	@Autowired
+	@Inject
 	public AuthenticatorImpl(UserDao userDao) {
 		super();
 		this.userDao = userDao;
